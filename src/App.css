@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+:root {
+  --bg-color: #rgba(8, 197, 222, 0.7);
+  --text-color: #333;
+  --main-color: #12BCB8;
+  --white-color: rgb(240, 234, 234);
+  --shadow-color: #060F1C;
+  --light-color: #A5FFFF;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Use 'Roboto Slab' for headers or specific content: */
+h1, h2, h3 {
+  font-family: 'Roboto Slab', serif;
+  color: var(--light-color);
+  margin-top: 5rem;
+}
+.video-background {
+  position: fixed;    /* fixed position */
+  top: 0;
+  left: 0;
+  width: 100%;        /* full width */
+  height: 100%;       /* full height */
+  overflow: hidden;   /* hide the overflow */
+  z-index: -1;        /* keep it behind content */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.video-background video {
+  object-fit: cover;   /* this will cover the viewport */
+  width: 100vw;        /* viewport width */
+  height: 100vh;       /* viewport height */
+  position: absolute;  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* center the video */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box{
+  color:var(--shadow-color)  !important;
 }

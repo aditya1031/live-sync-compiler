@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import Home from "./pages/Home";
+import CodeComplier from './pages/CodeComplier';
+import About from './pages/About';
+import CodeRoom from './pages/CodeRoom';
+import ResearchPaper from './pages/ResearchPaper';
+import WebDevEnvironment from './pages/WebDevEnvironment';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/CodeComplier" element={<CodeComplier />} />
+        <Route path="/CodeRoom" element={<CodeRoom />} />
+        <Route path="/WebDevEnvironment" element={<WebDevEnvironment />} />
+        <Route path="/ResearchPaper" element={<ResearchPaper />} />
+        <Route path="/About" element={<About />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
