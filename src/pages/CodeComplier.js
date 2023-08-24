@@ -1,12 +1,13 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import NavBar from '../components/NavBar';
 import CodeMirror from 'codemirror';
 import 'codemirror/lib/codemirror.css';
-import 'codemirror/theme/darcula.css';
+import 'codemirror/theme/dracula.css';
 import 'codemirror/mode/javascript/javascript';
 import './Style.css';
 
-const CodeComplier = () => {
+const CodeCompiler = () => {
+    const [output, setOutput] = useState('');
     const textAreaRef = useRef(null);
     const codeEditorRef = useRef();
 
@@ -15,49 +16,41 @@ const CodeComplier = () => {
             codeEditorRef.current = CodeMirror.fromTextArea(textAreaRef.current, {
                 lineNumbers: true,
                 mode: 'javascript',
-                theme: 'darcula'
+                theme: 'dracula'
             });
         }
     }, []);
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         const code = codeEditorRef.current.getValue();
 
-        // Capture previous console.log function
-        const oldLog = console.log;
-
-        // Clear the output area first
-        document.getElementById('output').textContent = '';
-
-        // Override console.log to capture output
-        console.log = (message) => {
-            document.getElementById('output').textContent += message + '\n';
-        };
+        // Displaying the code in the output area immediately
+        setOutput(code);
 
         try {
-            // Execute the code
-            // WARNING: Using eval is potentially dangerous
-            eval(code);
+            const response = await fetch('http://localhost:5000/runCode', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ code })
+            });
+
+            const data = await response.json();
+            alert(data.message);  // Alert the user with the server's response message
         } catch (error) {
-            // If there's an error in the code, display it
-            document.getElementById('output').textContent = error;
-        } finally {
-            // Restore original console.log function
-            console.log = oldLog;
+            console.error("There was an error submitting the code:", error);
         }
     };
 
     return (
-        <>
-            <NavBar />
-            <div className="code-area">
-                <textarea ref={textAreaRef}></textarea>
-                <button onClick={handleSubmit}>Run</button>
-                <div id="output" className="output-area"></div>
-            </div>
-        </>
+        <div>
+            <NavBar/>
+            <textarea ref={textAreaRef}></textarea>
+            <button onClick={handleSubmit}>Run</button>
+            <div>Output: {output}</div>
+        </div>
     );
 }
 
-export default CodeComplier;
-
+export default CodeCompiler;
