@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  # React Frontend
+  client:
+    build:
+      context: .
+      dockerfile: dockerfile.client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server
+    volumes:
+      - .:/app  # Ensure this path is correct
+    networks:
+      - app-network
+
+  # Express Backend
+  server:
+    build:
+      context: ./server
+      dockerfile: dockerfile.server
+    ports:
+      - "5000:5000"
+    networks:
+      - app-network
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock  # Mount the Docker socket
+
+  # Python Execution Environment
+  python:
+    image: python-executor  # <--- Add this line
+    build:
+      context: ./server
+      dockerfile: dockerfile.python
+    ports:
+      - "8000:8000"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

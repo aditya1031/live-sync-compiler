@@ -3,7 +3,7 @@ import NavBar from '../components/NavBar';
 import CodeMirror from 'codemirror';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/dracula.css';
-import 'codemirror/mode/javascript/javascript';
+import 'codemirror/mode/python/python';  // Make sure you import the python mode
 import './Style.css';
 
 const CodeCompiler = () => {
@@ -15,7 +15,7 @@ const CodeCompiler = () => {
         if (textAreaRef.current) {
             codeEditorRef.current = CodeMirror.fromTextArea(textAreaRef.current, {
                 lineNumbers: true,
-                mode: 'javascript',
+                mode: 'python',
                 theme: 'dracula'
             });
         }
@@ -23,9 +23,6 @@ const CodeCompiler = () => {
 
     const handleSubmit = async () => {
         const code = codeEditorRef.current.getValue();
-
-        // Displaying the code in the output area immediately
-        setOutput(code);
 
         try {
             const response = await fetch('http://localhost:5000/runCode', {
@@ -37,7 +34,7 @@ const CodeCompiler = () => {
             });
 
             const data = await response.json();
-            alert(data.message);  // Alert the user with the server's response message
+            setOutput(data.output || data.message);
         } catch (error) {
             console.error("There was an error submitting the code:", error);
         }
