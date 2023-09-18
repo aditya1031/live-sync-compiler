@@ -1,30 +1,52 @@
 :root {
-    --bg-color: #rgba(8, 197, 222, 0.7);
-    --text-color: #333;
-    --main-color: #12BCB8;
-    --white-color: rgb(240, 234, 234);
-    --shadow-color: #060F1C;
-    --light-color: #A5FFFF;
+    /* Base Colors */
+    --bg-color: #040342;
+    /* Dark Blue */
+    --text-color: #ECECEC;
+    /* Light Gray */
 
+    /* Navbar styles */
+    --navbar-bg: rgba(28, 28, 96, 0.5);
+    --navbar-font: 'Share Tech Mono', sans-serif;
+
+    /* Typography */
+    --heading1-font: 'Merriweather Sans', sans-serif;
+    --heading3-font: 'Merriweather', serif;
+    --body-text-font: 'Merriweather', serif;
+    --button-font: 'Roboto Mono', monospace;
+
+    /* Additional Colors */
+    --secondary-bg: #1C1C60;
+    /* Slightly Lighter Blue */
+    --secondary-text: #B0B0B0;
+    /* Soft Gray */
+    --accent-color1: #34B1A7;
+    /* Teal */
+    --accent-color2: #FF6B6B;
+    /* Warm Coral */
+    --tertiary-bg: #31317A;
+    /* Even Lighter Blue */
+
+
+
+    /* Transition */
+    --transition-speed: 0.3s;
 }
 
 
 
 
 
+
+
+
 .navbar-3d {
-    background-color: rgba(73, 84, 86, 0.25);
-    /* Slightly transparent gradient */
-    backdrop-filter: blur(10px);
-    /* This will give the appearance of background blur, enhancing transparency. Note: Ensure you check browser compatibility */
-    border-bottom: -1px solid;
-    /* 3D feel bottom border */
+    height: 4.3rem;
+    background: var(--navbar-bg);
+    backdrop-filter: blur(3px);
+    border-bottom: 4px transparent;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
-    /* Subtle shadow for depth */
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
+    border-radius: 0 0 7px 7px;
     text-shadow: 0px 0px 3px rgba(30, 29, 29, 0.2);
 }
 
@@ -32,29 +54,56 @@
 
 
 
-.navbar-3d .nav-link {
-    transition: transform 0.3s, box-shadow 0.2s;
-    font-size: 1.1rem;
-    font-weight: bolder;  /* Set text to bold */
-    padding: 8px 16px;    /* Slightly increase padding for better hover effect */
-    border-radius: 8px;
-    margin-right: 12px;   /* Add space to the right of each link */
-    color: var(--main-color);
+
+
+.navbar-3d .nav-link,
+.navbar-3d .navbar-brand {
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    color: var(--text-color);
+    font-family: var(--body-text-font);
+    /* Using the body text font for nav links */
 }
 
-.navbar-3d .nav-link:last-child {
-    margin-right: 0;      /* Ensure the last link doesn't have extra margin */
+
+
+
+
+
+
+
+.navbar-3d .nav-link {
+    font-size: 1.3rem;
+    font-weight: bolder;
+    padding: 4px 16px;
+    border-radius: 12px;
+    margin-right: 30px;
+    transform-origin: center;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed), font-size var(--transition-speed);
 }
+
+
+
+
+
+
+
+
 
 .navbar-3d .nav-link:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 2px 10px #A5FFFF;
-    font-size: 1.1rem;
-    color: var(--light-color);
+    transform: scale(1.03);
+    box-shadow: 0 2px 8px var(--accent-color2);
+    font-size: 1.4rem;
+    color: var(--accent-color2);
 }
 
+
+
+
+
+
+
 .navbar-3d .nav-link.active {
-    color: var(--light-color) !important;  
+    color: var(--text-color) !important;
 }
 
 
@@ -64,86 +113,123 @@
 
 
 .navbar-3d .navbar-brand {
-    transition: transform 0.3s, box-shadow 0.2s;
-    font-size: 2rem;
+    font-family: var(--navbar-font);
+    font-size: 45px;
+    font-weight: 700;
     margin-left: -2px;
-    font-weight: bold;
-    color: var(--main-color);
+    color: var(--accent-color2);
 }
 
+
+
+
+
+
+
 .navbar-3d .navbar-brand:hover {
-    transform: translateY(-3px);
-    /* Slight upward shift on hover for a "lifting" effect */
-    color: var(--light-color);
+    transform: translateY(-4px);
+    color: var(--text-color);
 }
-.navbar-3d .navbar-brand:active,
-.navbar-3d .navbar-brand:focus {
-    color: var(--light-color) !important;  /* Or whichever color you prefer */
-    outline: none !important;  /* Removes any outline which browsers might place on focused elements */
-}
+
+
+
+
+
 
 
 
 
 .navbar-toggler {
-  
-    background: #70b5b481 !important;
-    transition: transform 0.3s, box-shadow 0.3s;
+    background: var(--accent-color2);
+    font-family: var(--button-font);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
-.navbar-toggler:hover {
-    transform: scale(1.05); /* Slightly enlarge the button */
-    cursor: pointer;
-    box-shadow: 2px 2px 10px #A5FFFF;
-}
+
+
+
+
+
+
+.navbar-toggler:hover,
 .navbar-toggler:active {
-    transform: scale(0.95);
-    box-shadow: 2px 2px 10px #A5FFFF;
-    
+    transform: scale(1.05);
+    box-shadow: 2px 2px 10px var(--accent-color2);
 }
+
+
+
+
+
+
+
 .navbar-toggler:focus {
-    outline: none !important; 
-    box-shadow: none !important; 
+    outline: none;
 }
 
 
-/* Existing styles... */
 
+
+
+
+
+/* Navbar container styles */
 .navbar-container {
-    position: fixed; 
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1050;
-    transition: background-color 10s ease-in-out; /* For a smooth fade effect when hovering */
+    transition: background-color var(--transition-speed);
 }
+
+
+
+
+
+
+
+
 
 .navbar-3d {
-    pointer-events: none; /* Ensures no interactions happen when navbar is hidden */
+    pointer-events: none;
 }
+
+
+
+
+
+
 
 .navbar-container:hover .navbar-3d {
-    opacity: 1.1;
-    pointer-events: all; /* Allows interactions when navbar is visible */
-    transition: background-color 5s ; /* For a smooth fade effect when hovering */
-    
+    opacity: 1;
+    pointer-events: all;
 }
 
+
+
+
+
+
+
 .navbar-tab {
-    position: absolute; 
+    position: absolute;
     top: 0;
     left: 80%;
     transform: translateX(-50%);
-    background: #65bfcf ;
+    background: var(--accent-color2);
     color: #fff;
     padding: 5px 15px;
     border-radius: 0 0 5px 5px;
-    cursor: pointer;
-    z-index: 1; /* to ensure it's above the navbar and always visible */
-    text-align: center;
-    transition: opacity 5s ease-in-out;
+    z-index: 1;
+    transition: opacity var(--transition-speed);
 }
 
-/* Hide the navbar tab on the home page */
+
+
+
+
+
+
 .navbar-container:not(.hidden-navbar) .navbar-tab {
     display: none;
 }

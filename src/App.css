@@ -1,52 +1,32 @@
 :root {
-  --bg-color: #rgba(8, 197, 222, 0.7);
-  --text-color: #333;
-  --main-color: #12BCB8;
-  --white-color: rgb(240, 234, 234);
-  --shadow-color: #060F1C;
-  --light-color: #A5FFFF;
-
+  /* Base Colors */
+  --bg-color: #040342;  /* Dark Blue */
+  --text-color: #ECECEC;  /* Light Gray */
+  
+  /* Navbar styles */
+  --navbar-bg: rgba(28, 28, 96, 0.5);
+  --navbar-font: 'Share Tech Mono', sans-serif;
+  
+  /* Typography */
+  --heading1-font: 'Merriweather Sans', sans-serif;
+  --heading3-font: 'Merriweather', serif;
+  --body-text-font: 'Merriweather', serif;
+  --button-font: 'Roboto Mono', monospace;
+  
+  /* Additional Colors */
+  --secondary-bg: #1C1C60;  /* Slightly Lighter Blue */
+  --secondary-text: #B0B0B0;  /* Soft Gray */
+  --accent-color1: #34B1A7;  /* Teal */
+  --accent-color2: #FF6B6B;  /* Warm Coral */
+  --tertiary-bg: #31317A;  /* Even Lighter Blue */
+  --main-color:var(--accent-color2)
+  
+  /* Transition */
+  --transition-speed: 0.3s;
 }
-
-
-
 
 body {
-  margin: 0;
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  
+  background-color: var(--bg-color);
 }
 
-/* Use 'Roboto Slab' for headers or specific content: */
-h1, h2, h3 {
-  font-family: 'Roboto Slab', serif;
-  color: var(--light-color);
-  margin-top: 5rem;
-}
-.video-background {
-  position: fixed;    /* fixed position */
-  top: 0;
-  left: 0;
-  width: 100%;        /* full width */
-  height: 100%;       /* full height */
-  overflow: hidden;   /* hide the overflow */
-  z-index: -1;        /* keep it behind content */
-}
 
-.video-background video {
-  object-fit: cover;   /* this will cover the viewport */
-  width: 100vw;        /* viewport width */
-  height: 100vh;       /* viewport height */
-  position: absolute;  
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);  /* center the video */
-}
-
-.box{
-  color:var(--shadow-color)  !important;
-}

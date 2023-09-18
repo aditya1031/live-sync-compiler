@@ -24,14 +24,13 @@ const NavBar = () => {
         { !showNavBar && <div className="navbar-tab" onMouseOver={() => setShowNavBar(true)}>Show Navbar</div> }
         { showNavBar && <Navbar expand="lg" className="navbar-3d">
         <Container>
-          <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
+          <Navbar.Brand href="/">LiveCodeSync</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" className='tog' />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="/CodeComplier" className='link'>Online Complier</Nav.Link>
-              <Nav.Link href="/CodeRoom" className='link'>Code Room</Nav.Link>
-              <Nav.Link href="/WebDevEnvironment" className='link'>WebDevEnvironment</Nav.Link>
-              <Nav.Link href="/ResearchPaper" className='link'>Research Paper</Nav.Link>
+              <Nav.Link href="/CodeComplier" className='link'>Complier</Nav.Link>
+              <Nav.Link href="/CodeRoom" className='link'>CodeRoom</Nav.Link>
+              <Nav.Link href="/WebDevEnvironment" className='link'>WebDev</Nav.Link>
               <Nav.Link href="/About" className='link'>About</Nav.Link>
             </Nav>
           </Navbar.Collapse>

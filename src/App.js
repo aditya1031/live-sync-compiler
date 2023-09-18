@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import CodeComplier from './pages/CodeComplier';
 import About from './pages/About';
 import CodeRoom from './pages/CodeRoom';
-import ResearchPaper from './pages/ResearchPaper';
 import WebDevEnvironment from './pages/WebDevEnvironment';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -19,8 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/CodeComplier" element={<CodeComplier />} />
         <Route path="/CodeRoom" element={<CodeRoom />} />
-        <Route path="/WebDevEnvironment" element={<WebDevEnvironment />} />
-        <Route path="/ResearchPaper" element={<ResearchPaper />} />
+        <Route path="/WebDevEnviroment" element={<WebDevEnvironment />} />
         <Route path="/About" element={<About />} />
       </Routes>
     </BrowserRouter>
