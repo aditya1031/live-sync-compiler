@@ -50,7 +50,7 @@
   }
 }
 
-#quote {
+.quote {
   margin-top: 1.69rem;
   color: var(--text-color);
   font-family: var(--heading3-font);
@@ -99,6 +99,7 @@
   margin-right: 3rem;
   margin-left: auto;
   margin-bottom: 1.5rem;
+  color: white;
   /* Distance between buttons */
   border-radius: .8rem;
   opacity: .7;
@@ -118,27 +119,135 @@
 }
 
 
-.image-container{
-  position: top;
-  max-width: 600px;
-  margin: -35rem 50rem 0rem;
 
+
+.image-container {
+  position: relative;
+  max-width: auto;
+  margin: -35rem 45rem 0rem;
+  perspective: 1000px;
+  /* Needed for 3D transformations */
 }
 
 .image {
-  width: 240px;
+
+  width: 220px;
   height: 310px;
   flex-shrink: 0;
-  margin-right: 1rem;
   border-radius: 25px;
-  
-}
-#im-2{
-
-  margin: -20rem 17rem 0rem;
-}
-#im-3{
-
-  margin: -20rem 8rem -10rem;
+  box-shadow: 10px 10px 10px rgba(38, 37, 37, 0.5),
+    inset 0px 10px 8px rgba(38, 37, 37, 0.2);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  /* Make the transition longer and more fluid */
 }
 
+.image:hover {
+  transform: scale(1.1) rotate3d(1, -1, 0, 10deg);
+  /* Enlarge and rotate in 3D space */
+  box-shadow: 5px 5px 5px rgba(38, 37, 37, 0.5),
+    inset 0px 5px 5px rgba(38, 37, 37, 0.2);
+  /* Adjust box-shadow on hover for depth effect */
+  z-index: 10;
+}
+
+
+#im-1 {
+  margin: 3rem;
+}
+
+#im-2 {
+  margin: -25rem 0rem 0rem 18rem;
+}
+
+#im-3 {
+  margin: -15rem 0rem 0rem 10rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+.topics {
+  margin-top: 15rem;
+  margin-left: 35%;
+  color: var(--accent-color2);
+  font-family: var(--heading1-font);
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+  text-shadow: 25px 25px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+.fet {
+  display: flex;
+  justify-content: center;
+  /* aligns content horizontally to the center */
+  align-items: center;
+  /* aligns content vertically to the center */
+
+  margin-top: 1.2rem;
+  margin-bottom: .5rem;
+  color: var(--text-color);
+  font-family: var(--heading1-font);
+  font-size: 30px;
+  font-weight: 500;
+  font-variant: all-small-caps;
+  white-space: nowrap;
+  overflow: hidden;
+
+  /* You may also need to specify a height for this container to see the vertical centering effect */
+  height: auto;
+  /* adjust this value as needed */
+}
+
+
+.feat {
+  text-shadow: 25px 25px 25px rgba(0, 0, 0, 0.2);
+  background-color: #31317A;
+  border-radius: 15px;
+  width: 350px;
+  height: 530px;
+  flex-shrink: 0;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+
+}
+
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  /* Horizontally center the items */
+  gap: 4rem;
+}
+
+.text {
+  padding: 18px;
+  /* Space between the border and text */
+
+  color: var(--text-color);
+  font-family: var(--body-text-font);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 280;
+  line-height: 1.5;
+
+  /* You may also need to specify a height for this container to see the vertical centering effect */
+  height: 150px;
+  /* adjust this value as needed */
+  text-align: left;
+  /* Centers the text horizontally */
+}
