@@ -216,13 +216,19 @@
 
 .feat {
   text-shadow: 25px 25px 25px rgba(0, 0, 0, 0.2);
-  background-color: #31317A;
+  background-color: var(--tertiary-bg);
   border-radius: 15px;
   width: 350px;
   height: 530px;
   flex-shrink: 0;
   margin-top: 1.5rem;
-  margin-bottom: 2rem;
+  transition: transform 0.5s;
+  /* Animation effect on hover */
+
+  /* When hovered, scale up and rotate */
+  &:hover {
+    transform: scale(1.08) rotateY(10deg);
+  }
 
 }
 
@@ -250,4 +256,318 @@
   /* adjust this value as needed */
   text-align: left;
   /* Centers the text horizontally */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.peimg {
+  margin-top: 7rem;
+  margin-left: 5rem;
+  text-shadow: 50px 50px 50px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  /* Prepare the container for 3D transformations */
+  transition: transform 0.5s;
+  /* Add smooth transition for animations */
+  perspective: 1000px;
+  /* 3D perspective */
+}
+
+.peimg:hover {
+  transform: scale(1.05) rotateY(10deg);
+  /* Enlarge and bend backward */
+}
+
+
+#priyashi {
+  margin-left: 58rem;
+}
+
+.info {
+  overflow-x: hidden;
+  /* Prevent horizontal scrolling */
+
+
+  background-color: var(--tertiary-bg);
+  text-shadow: 50px 50px 50px rgba(0, 0, 0, 0.2);
+
+  border-radius: 6rem 0rem 0rem 6rem;
+  width: 700px;
+  height: 350px;
+  flex-shrink: 0;
+  margin-top: -18rem;
+  margin-bottom: 16rem;
+  margin-left: 43rem;
+  transition: transform 0.5s;
+  /* Animation effect on hover */
+
+  /* When hovered, scale up and rotate */
+  &:hover {
+    transform: scale(1.08) rotateY(10deg);
+  }
+}
+
+#priya {
+  width: 840px;
+  margin-left: -10rem;
+  border-radius: 0rem 6rem 6rem 0rem !important;
+}
+
+#priyaabout {
+  margin-left: 11rem;
+
+}
+
+#priyaname {
+  margin-left: 11rem;
+}
+
+
+.title {
+  display: flex;
+  /* Set the container to flex to align children horizontally */
+
+  align-items: center;
+  /* Center children vertically */
+}
+
+.name,
+.job {
+  flex-shrink: 0;
+  /* Prevent flex items from shrinking */
+  white-space: nowrap;
+  /* Keep the text in a single line */
+}
+
+.name {
+  margin-top: 2rem;
+  margin-left: 3rem;
+  margin-right: 1.5rem;
+  /* Add some space between the two */
+  color: var(--accent-color2);
+  font-family: var(--body-text-font);
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: capitalize;
+  text-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
+}
+
+.job {
+  margin-top: 2rem;
+  color: var(--text-color);
+  font-family: var(--heading3-font);
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: lowercase;
+}
+
+
+.about {
+  margin-left: 4rem;
+  display: flex;
+  max-width: 34rem;
+  padding: 15px;
+  /* Space between the border and text */
+  color: var(--text-color);
+  font-family: var(--body-text-font);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 280;
+  line-height: 1.4;
+
+  /* You may also need to specify a height for this container to see the vertical centering effect */
+  height: auto;
+  /* adjust this value as needed */
+  text-align: left;
+  /* Centers the text horizontally */
+}
+
+#batabout {
+  height: 3rem;
+  width: 7rem;
+  align-items: center;
+  font-family: var(--button-font);
+  font-size: 20px;
+  font-weight: 600;
+  border-color: var(--tertiary-bg);
+  display: flex;
+  margin-right: 3rem;
+  margin-top: -2rem;
+  margin-left: auto;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+
+
+
+
+.form {
+  background: var(--tertiary-bg);
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  /* Reduced shadow for better readability */
+  border-radius: 2rem;
+  width: 320px;
+  height: 450px;
+ 
+  margin-top: 2rem;
+  margin-bottom: -2.5rem;
+  margin-left: 6.5rem;
+  padding: 1rem;
+  /* Add padding to give space inside the form */
+  display: flex;
+  /* Using flexbox to center content */
+  flex-direction: column;
+  /* Make items stack vertically */
+  align-items: center;
+  /* Center items horizontally */
+  justify-content: space-around;
+  /* Distribute items with equal space */
+}
+
+
+
+.texte label {
+  display: block;
+  /* Make labels block-level so they take up their own line */
+  margin-bottom: 0.2rem;
+  /* Space between label and input/textarea */
+}
+
+
+
+.texte input,
+.texte textarea {
+  width: 100%;
+  /* Make input/textarea take the full width of .texte */
+  padding: 0.3rem;
+  /* Padding inside input/textarea */
+  border-radius: 15px;
+  /* Rounded corners */
+  border: 1px solid var(--tertiary-bg);
+  /* Border color */
+  font-size: 1rem;
+  /* Font size */
+  font-family: var(--heading3-font);
+  color: black;
+  /* Text color */
+  background: var(--secondary-text);
+  /* Input background color */
+  outline: none;
+  /* Remove default focus outline */
+}
+
+
+
+
+.texte input:focus,
+.texte textarea:focus {
+
+  border-color: var(--accent-color2);
+  /* Change border color on focus */
+  box-shadow: 5px 5px 15px rgba(30, 29, 29, 0.2);
+  /* Add shadow on focus */
+}
+
+/* Container for name and email */
+.name-email-container {
+  display: flex;
+  width: 16rem;
+  gap: .3rem;
+  /* Adds space between name and email textareas */
+}
+
+/* Adjusting the width of specific text areas */
+#sub,
+#phone {
+  width: 16rem;
+
+}
+
+.texte textarea {
+  flex: 1;
+
+  width: 16rem;
+  /* Make sure text areas take the full width of their parent */
+}
+
+#submit {
+  height: 2.5rem;
+  border-radius: .5rem;
+  width: 7rem;
+  margin-bottom: .5rem;
+  margin-left: 3rem;
+  align-items: center;
+  font-family: var(--button-font);
+  font-size: 20px;
+  font-weight: 600;
+  border-color: var(--tertiary-bg);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+  margin-top: 5rem;
+  height: 4rem;
+  background: var(--secondary-bg);
+  backdrop-filter: blur(3px);
+  border-bottom: 4px transparent;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 7px 7px;
+  text-shadow: 0px 0px 3px rgba(30, 29, 29, 0.2);
+  display: flex;
+  /* Using flexbox for content alignment */
+  align-items: center;
+  /* Vertically align items in the center */
+
+}
+
+#up {
+  height: 2.5rem;
+  border-radius: .5rem;
+  width: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 76rem;
+  position: fixed;
+
+}
+
+#copr {
+  margin-bottom: .2rem;
+  position: absolute;
+  display: flex;
+  max-width: 60rem;
+  padding: 25px;
+  margin-left: 3rem;
+  color: var(--text-color);
+  font-family: var(--heading3-font);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+
 }
