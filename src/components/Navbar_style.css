@@ -43,7 +43,7 @@
 .navbar-3d {
     height: 4.3rem;
     background: var(--navbar-bg);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(2px);
     border-bottom: 4px transparent;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
     border-radius: 0 0 7px 7px;
