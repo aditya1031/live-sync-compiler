@@ -1,0 +1,115 @@
+:root {
+    /* Base Colors */
+    --bg-color: #040342;
+    /* Dark Blue */
+    --text-color: #ECECEC;
+    /* Light Gray */
+
+    /* Additional Colors */
+    --secondary-bg: #1C1C60;
+    /* Slightly Lighter Blue */
+    --secondary-text: #B0B0B0;
+    /* Soft Gray */
+    --accent-color1: #34B1A7;
+    /* Teal */
+    --accent-color2: #FF6B6B;
+    /* Warm Coral */
+    --tertiary-bg: #31317A;
+    /* Even Lighter Blue */
+
+    /* Typography */
+    --navbar-font: 'Share Tech Mono', sans-serif;
+    --heading1-font: 'Merriweather Sans', sans-serif;
+    --heading3-font: 'Merriweather', serif;
+    --body-text-font: 'Merriweather', serif;
+    --button-font: 'Roboto Mono', monospace;
+
+    /* Navbar styles */
+    --navbar-bg: rgba(28, 28, 96, 0.5);
+
+    /* Transition & Animation */
+    --transition-speed: 0.3s;
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    /* Smooth animations */
+}
+
+
+
+
+
+.coder {
+
+    margin-top: 8vh;
+    margin-left: 42vh;
+    align-items: center;
+    width: 56vw;
+    height: 46vw;
+    flex-shrink: 0;
+    padding: 1.2%;
+    border-radius: .5vw;
+    background-color: var(--tertiary-bg);
+}
+
+
+.boxinfor {
+    margin-top:-1vw;
+    color: var(--text-color);
+    font-family: var(--heading3-font);
+    font-size: 1.2vw;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#boxr{
+    margin-top: .5vw;
+    color: var(--text-color);
+    font-family: var(--heading3-font);
+    font-size: 1.2vw;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+#inputr {
+    width: 21vw;
+    height: 46vw;
+    margin: 4.1vw 0vw 0vw 56vw;
+    padding: 1%;
+    position: absolute;
+
+}
+
+
+
+.coder textarea {
+    margin-top: 0vw;
+    background-color: var(--secondary-text);  
+    border-radius: .5vw; 
+    padding: 10px;  
+    color: black;  
+    font-family: var(--heading1-font)  ;
+    width: 53vw; 
+    height:10vw; 
+    position: relative;
+    resize: none;
+}
+
+
+.participant{
+    background-color: var(--accent-color1);
+    margin-top: -49vw;
+    margin-left: -22.8vw;
+    border-radius: .5vw;
+    width: 18vw;
+    height: 51vw;
+}
+#room{
+    background-color: #aa1c1c;
+    margin-top: -98.5vh;
+    margin-left: -43vh;
+    border-radius: 10px;
+    width: 250px;
+    height: 600px;
+}

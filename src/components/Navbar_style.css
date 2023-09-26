@@ -41,10 +41,10 @@
 
 
 .navbar-3d {
-    height: 4.3rem;
+    height: 4.7vw;
     background: var(--navbar-bg);
     backdrop-filter: blur(2px);
-    border-bottom: 4px transparent;
+    border-bottom: 4vw transparent;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
     border-radius: 0 0 7px 7px;
     text-shadow: 0px 0px 3px rgba(30, 29, 29, 0.2);
@@ -72,7 +72,7 @@
 
 
 .navbar-3d .nav-link {
-    font-size: 1.3rem;
+    font-size: 1.5vw;
     font-weight: bolder;
     padding: 4px 16px;
     border-radius: 12px;
@@ -90,7 +90,7 @@
 
 
 .navbar-3d .nav-link:hover {
-    transform: scale(1.03);
+    transform: scale(1);
     box-shadow: 0 2px 8px var(--accent-color2);
     font-size: 1.4rem;
     color: var(--accent-color2);
@@ -114,9 +114,10 @@
 
 .navbar-3d .navbar-brand {
     font-family: var(--navbar-font);
-    font-size: 45px;
+    font-size: 3vw;
     font-weight: 700;
     margin-left: -2px;
+    margin-bottom: .1vw;
     color: var(--accent-color2);
 }
 
@@ -127,7 +128,7 @@
 
 
 .navbar-3d .navbar-brand:hover {
-    transform: translateY(-4px);
+    transform: translateY(4px);
     color: var(--text-color);
 }
 
@@ -153,7 +154,7 @@
 
 .navbar-toggler:hover,
 .navbar-toggler:active {
-    transform: scale(1.05);
+    transform: scale(1);
     box-shadow: 2px 2px 10px var(--accent-color2);
 }
 
@@ -214,12 +215,19 @@
 .navbar-tab {
     position: absolute;
     top: 0;
-    left: 80%;
-    transform: translateX(-50%);
+    left: 82vw;
+    width: 29vh;
+    height: 3.5vw;
+    align-content: center;
+    font-weight: 500;
+    font-size: 1.6vw;
+    font-family: var(--button-font);
     background: var(--accent-color2);
-    color: #fff;
-    padding: 5px 15px;
-    border-radius: 0 0 5px 5px;
+    color: var(--text-color);
+    border: var(--bg-color);
+    padding: 5px 25px;
+    box-shadow: 25px 25px 25px rgba(30, 29, 29, 0.2);
+    border-radius:  0 0 .3vw .3vw;
     z-index: 1;
     transition: opacity var(--transition-speed);
 }

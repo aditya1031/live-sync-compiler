@@ -51,9 +51,10 @@
 }
 
 #homeH1 {
+  margin-top: 4vw;
   color: var(--accent-color2);
   font-family: var(--heading1-font);
-  font-size: 65px;
+  font-size: 5.5vw;
   font-weight: 800;
   font-variant: all-small-caps;
   text-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
@@ -68,10 +69,10 @@
 }
 
 .quote {
-  margin-top: 1.69rem;
+  margin-top: 1.7vw;
   color: var(--text-color);
   font-family: var(--heading3-font);
-  font-size: 28px;
+  font-size: 2vw;
   font-weight: 400;
   font-variant: all-small-caps;
   white-space: nowrap;
@@ -79,16 +80,16 @@
   transition: transform var(--transition-speed);
 
   &:hover {
-    transform: scale(1.07);
+    transform: scale(1.08);
     /* subtle scaling effect on hover */
   }
 }
 
 #intro {
-  margin-top: 1.3rem;
+  margin-top: 2vw;
   color: var(--secondary-text);
   font-family: var(--body-text-font);
-  font-size: 20px;
+  font-size: 1.4vw;
   font-weight: 400;
   text-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
   /* 3D shadow effect */
@@ -96,30 +97,33 @@
 }
 
 .content-wrapper {
-  max-width: 680px;
+  
+  max-width: 46vw;
   margin: 8rem 4rem 2rem;
   perspective: 1000px;
   /* needed for some 3D transforms */
 }
 
 .buton {
-  margin: 0rem 7rem 5rem;
+  margin: 0vw 7vw 5vw;
 }
 
 .batan {
   font-family: var(--button-font);
-  font-size: 25px;
-  font-weight: 550;
+  font-size: 1.7vw;
+  font-weight: 900;
+  border: -1vw;
   border-color: var(--bg-color);
-  width: 250px;
-  height: 70px;
-  margin-right: 3rem;
+  width: 16vw;
+  height: 4vw;
+  padding: 1%;
+  margin-right: 3vw;
   margin-left: auto;
-  margin-bottom: 1.5rem;
-  color: white;
+  margin-bottom: 0vw;
+  color: var(--text-color);
   /* Distance between buttons */
-  border-radius: .8rem;
-  opacity: .7;
+  border-radius: 8px;
+  opacity: 1;
   background: var(--accent-color1);
   box-shadow: 25px 25px 25px rgba(30, 29, 29, 0.2),
     /* horizontal, vertical, blur, color */
@@ -141,43 +145,44 @@
 .image-container {
   position: relative;
   max-width: auto;
-  margin: -35rem 45rem 0rem;
+  margin: -45vw 50vw 0vw 55vw;
   perspective: 1000px;
   /* Needed for 3D transformations */
 }
 
 .image {
 
-  width: 220px;
-  height: 310px;
+  width: 17vw;
+  height: 23vw;
   flex-shrink: 0;
-  border-radius: 25px;
+  border-radius: 15px;
   box-shadow: 25px 25px 25px rgba(30, 29, 29, 0.2),
-    inset 0px 10px 8px rgba(38, 37, 37, 0.2);
+    inset 15px 15px 15px rgba(38, 37, 37, 0.2);
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   /* Make the transition longer and more fluid */
 }
 
 .image:hover {
-  transform: scale(1.1) rotate3d(1, -1, 0, 10deg);
+  transform: scale(1.08) rotate3d(1, -1, 0, 10deg);
   /* Enlarge and rotate in 3D space */
   box-shadow: 25px 25px 25px rgba(30, 29, 29, 0.2),
-    inset 0px 5px 5px rgba(38, 37, 37, 0.2);
+    inset 55px 55px 55px rgba(38, 37, 37, 0.2);
   /* Adjust box-shadow on hover for depth effect */
-  z-index: 10;
+  z-index: 15;
 }
 
 
 #im-1 {
-  margin: 3rem;
+  margin: 6vw 0vw 0vw 1vw;
+ 
 }
 
 #im-2 {
-  margin: -25rem 0rem 0rem 18rem;
+  margin: -25vw 0vw 0vw 20vw;
 }
 
 #im-3 {
-  margin: -15rem 0rem 0rem 10rem;
+  margin: -15vw 0vw 0vw 10vw;
 }
 
 
@@ -191,11 +196,11 @@
 
 
 .topics {
-  margin-top: 15rem;
+  margin-top: 15vw;
   margin-left: 35%;
   color: var(--accent-color2);
   font-family: var(--heading1-font);
-  font-size: 55px;
+  font-size: 4vw;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
@@ -214,12 +219,11 @@
   /* aligns content horizontally to the center */
   align-items: center;
   /* aligns content vertically to the center */
-
-  margin-top: 1.2rem;
-  margin-bottom: .5rem;
+padding: 1%;
+  margin-bottom: .5vw;
   color: var(--text-color);
   font-family: var(--heading1-font);
-  font-size: 30px;
+  font-size: 2vw;
   font-weight: 500;
   font-variant: all-small-caps;
   white-space: nowrap;
@@ -235,10 +239,11 @@
   text-shadow: 25px 25px 25px rgba(0, 0, 0, 0.2);
   background-color: var(--tertiary-bg);
   border-radius: 15px;
-  width: 350px;
-  height: 530px;
+  width: 25vw;
+  height: 35vw;
+  padding: 1%;
   flex-shrink: 0;
-  margin-top: 1.5rem;
+  margin-top: 1.5vw;
   transition: transform 0.5s;
   /* Animation effect on hover */
 
@@ -254,22 +259,22 @@
   display: flex;
   justify-content: center;
   /* Horizontally center the items */
-  gap: 4rem;
+  gap: 4vw;
 }
 
 .text {
-  padding: 18px;
+  padding: 2%;
   /* Space between the border and text */
 
   color: var(--text-color);
   font-family: var(--body-text-font);
-  font-size: 15px;
+  font-size: 1vw;
   font-style: normal;
   font-weight: 280;
   line-height: 1.5;
 
   /* You may also need to specify a height for this container to see the vertical centering effect */
-  height: 150px;
+  height: 15vw;
   /* adjust this value as needed */
   text-align: left;
   /* Centers the text horizontally */
@@ -288,8 +293,10 @@
 
 
 .peimg {
-  margin-top: 7rem;
-  margin-left: 5rem;
+  margin-top: 10vw;
+  margin-left: 8vw;
+  width: 5vw;
+  size: 2vw;
   text-shadow: 50px 50px 50px rgba(0, 0, 0, 0.2);
   transform-style: preserve-3d;
   /* Prepare the container for 3D transformations */
@@ -300,30 +307,29 @@
 }
 
 .peimg:hover {
-  transform: scale(1.05) rotateY(10deg);
+  transform: scale(1.09) rotateY(10deg);
   /* Enlarge and bend backward */
 }
 
 
 #priyashi {
-  margin-left: 58rem;
+  margin-top: 1vw;
+  margin-left: 67vw;
 }
 
 .info {
+
   overflow-x: hidden;
-  /* Prevent horizontal scrolling */
-
-
   background-color: var(--tertiary-bg);
   text-shadow: 50px 50px 50px rgba(0, 0, 0, 0.2);
 
-  border-radius: 6rem 0rem 0rem 6rem;
-  width: 700px;
-  height: 350px;
+  border-radius: 100px 0px 0px 100px;
+  width: 44vw;
+  height: 23vw;
   flex-shrink: 0;
-  margin-top: -18rem;
-  margin-bottom: 16rem;
-  margin-left: 43rem;
+  margin-top: -22vw;
+  margin-bottom: 16vw;
+  margin-left: 56vw;
   transition: transform 0.5s;
   /* Animation effect on hover */
 
@@ -334,18 +340,18 @@
 }
 
 #priya {
-  width: 840px;
+  width: 57vw;
   margin-left: -10rem;
-  border-radius: 0rem 6rem 6rem 0rem !important;
+  border-radius: 0px 100px 100px 0px ;
 }
 
 #priyaabout {
-  margin-left: 11rem;
+  margin-left: 15vw;
 
 }
 
 #priyaname {
-  margin-left: 11rem;
+  margin-left: 14vw;
 }
 
 
@@ -359,20 +365,20 @@
 
 .name,
 .job {
-  flex-shrink: 0;
+  
   /* Prevent flex items from shrinking */
   white-space: nowrap;
   /* Keep the text in a single line */
 }
 
 .name {
-  margin-top: 2rem;
-  margin-left: 3rem;
-  margin-right: 1.5rem;
+  margin-top: 2vw;
+  margin-left: 3vw;
+  margin-right: 1.5vw;
   /* Add some space between the two */
   color: var(--accent-color2);
   font-family: var(--body-text-font);
-  font-size: 45px;
+  font-size: 2.5vw;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
@@ -381,10 +387,10 @@
 }
 
 .job {
-  margin-top: 2rem;
+  margin-top: 2vw;
   color: var(--text-color);
   font-family: var(--heading3-font);
-  font-size: 45px;
+  font-size: 2.5vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -393,17 +399,17 @@
 
 
 .about {
-  margin-left: 4rem;
+  margin-left: 4vw;
   display: flex;
-  max-width: 34rem;
+  max-width: 45vw;
   padding: 15px;
   /* Space between the border and text */
   color: var(--text-color);
   font-family: var(--body-text-font);
-  font-size: 15px;
+  font-size: 1vw;
   font-style: normal;
   font-weight: 280;
-  line-height: 1.4;
+  line-height: 1.5;
 
   /* You may also need to specify a height for this container to see the vertical centering effect */
   height: auto;
@@ -413,18 +419,18 @@
 }
 
 #batabout {
-  height: 3rem;
-  width: 7rem;
+  height: 3vw;
+  width: 8vw;
   align-items: center;
   font-family: var(--button-font);
-  font-size: 20px;
+  padding: 2%;
+  font-size: 1vw;
   font-weight: 600;
   border-color: var(--tertiary-bg);
   display: flex;
-  margin-right: 3rem;
-  margin-top: -2rem;
+  margin-right: 8vw;
+  margin-top: -2vw;
   margin-left: auto;
-  margin-bottom: 2rem;
   color: white;
 }
 
@@ -435,23 +441,15 @@
 .form {
   background: var(--tertiary-bg);
   box-shadow: 25px 25px 25px rgba(30, 29, 29, 0.2);
-  transition: transform 0.5s;
-  /* Animation effect on hover */
+  
+  border-radius: 8px;
+  width: 25vw;
+  height: 30vw;
 
-  /* When hovered, scale up and rotate */
-  &:hover {
-    transform: scale(1.03) rotatex(10deg);
-  }
-
-  /* Reduced shadow for better readability */
-  border-radius: 2rem;
-  width: 320px;
-  height: 450px;
-
-  margin-top: 2rem;
-  margin-bottom: -2.5rem;
-  margin-left: 6.5rem;
-  padding: 1rem;
+  margin-top: 1vw;
+  margin-bottom: 2vw;
+  margin-left: 6vw;
+  padding: 1%;
   /* Add padding to give space inside the form */
   display: flex;
   /* Using flexbox to center content */
@@ -461,26 +459,35 @@
   /* Center items horizontally */
   justify-content: space-around;
   /* Distribute items with equal space */
+  transition: transform 0.5s;
+  /* Animation effect on hover */
+
+  /* When hovered, scale up and rotate */
+  &:hover {
+    transform: scale(1.06) rotatex(10deg);
+  }
+
 
 }
 
 .bun {
-  margin-top: -25rem;
-  margin-bottom: 4rem;
+  margin-top: -28vw;
+  margin-bottom: 4vw;
 }
 
 .baton {
   border-radius: 25px 0px 0px 25px;
   background: var(--accent-color2);
   display: flex;
-  margin-top: 2rem;
-  margin-left: 67.5rem;
+  margin-top: 2vw;
+ 
+  margin-left: 82vw;
   border: var(--bg-color);
-  width: 260px;
+  width: 18vw;
   height: 4rem;
-  padding: 20px 10px 20px 21px;
+  padding: 2vw 1vw 2vw 1vw;
   align-items: center;
-  gap: 5rem;
+  gap: 3vw;
   box-shadow: 25px 25px 25px rgba(30, 29, 29, 0.2);
   transition: transform 0.5s;
   /* Animation effect on hover */
@@ -493,18 +500,18 @@
 
 
 #github {
-  width: 320px;
-  margin-left: 64.2rem;
+  width: 22vw;
+  margin-left: 78vw;
 }
 
 #linked {
-  width: 380px;
-  margin-left: 61rem;
+  width: 26vw;
+  margin-left: 74vw;
 }
 
 #link {
-  width: 440px;
-  margin-left: 57.8rem;
+  width: 30vw;
+  margin-left: 70vw;
 }
 
 
@@ -512,7 +519,7 @@
 .texte label {
   display: block;
   /* Make labels block-level so they take up their own line */
-  margin-bottom: 0.2rem;
+  margin-bottom: 2vw;
   /* Space between label and input/textarea */
 }
 
@@ -522,13 +529,13 @@
 .texte textarea {
   width: 100%;
   /* Make input/textarea take the full width of .texte */
-  padding: 0.3rem;
+  padding: 1%;
   /* Padding inside input/textarea */
-  border-radius: 15px;
+  border-radius: 10px;
   /* Rounded corners */
   border: 1px solid var(--tertiary-bg);
   /* Border color */
-  font-size: 1rem;
+  font-size: 1.5vw;
   /* Font size */
   font-family: var(--heading3-font);
   color: black;
@@ -554,34 +561,34 @@
 /* Container for name and email */
 .name-email-container {
   display: flex;
-  width: 16rem;
-  gap: .3rem;
+  width: 22vw;
+  gap: 1vw;
   /* Adds space between name and email textareas */
 }
 
 /* Adjusting the width of specific text areas */
 #sub,
 #phone {
-  width: 16rem;
+  width: 22vw;
 
 }
 
 .texte textarea {
   flex: 1;
 
-  width: 16rem;
+  width: 22vw;
   /* Make sure text areas take the full width of their parent */
 }
 
 #submit {
-  height: 2.5rem;
-  border-radius: .5rem;
-  width: 7rem;
-  margin-bottom: .5rem;
+  height: 2.5vw;
+  border-radius: 8px;
+  width: 7vw;
+  margin-bottom: -.8vw;
   margin-left: 3rem;
   align-items: center;
   font-family: var(--button-font);
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 600;
   border-color: var(--tertiary-bg);
 
@@ -600,11 +607,11 @@
 
 
 .footer {
-  margin-top: 2.5rem;
-  height: 4rem;
+  margin-top: 5vw;
+  height: 4.5vw;
   background: var(--secondary-bg);
   backdrop-filter: blur(3px);
-  border-bottom: 4px transparent;
+  border-bottom: 4vw transparent;
   box-shadow: 25px 25px 25px rgba(30, 29, 29, 0.2);
   border-radius: 0 0 7px 7px;
   text-shadow: 0px 0px 3px rgba(30, 29, 29, 0.2);
@@ -616,23 +623,26 @@
 }
 
 #up {
-  height: 2.5rem;
-  border-radius: .5rem;
-  width: 2.5rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-left: 76rem;
-  position: fixed;
+  align-items: center;
+  font-size: 1.3vw;
+  padding: 1vw;
+  height: 3vw;
+  border-radius: 8px;
+  width: 3.5vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  margin-left: 90vw;
+
 
 }
 
 #copr {
-  margin-bottom: .2rem;
+  margin-bottom: .2vw;
   position: absolute;
   display: flex;
-  max-width: 60rem;
+  max-width: 60vw;
   padding: 25px;
-  margin-left: 3rem;
+  margin-left: 3vw;
   color: var(--text-color);
   font-family: var(--heading3-font);
   font-size: 20px;

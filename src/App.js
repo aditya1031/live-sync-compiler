@@ -18,7 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/CodeComplier" element={<CodeComplier />} />
         <Route path="/CodeRoom" element={<CodeRoom />} />
-        <Route path="/WebDevEnviroment" element={<WebDevEnvironment />} />
+        <Route path="/WebDevEnvironment" element={<WebDevEnvironment />} />
         <Route path="/About" element={<About />} />
       </Routes>
     </BrowserRouter>

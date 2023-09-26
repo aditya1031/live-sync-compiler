@@ -1,0 +1,134 @@
+:root {
+    /* Base Colors */
+    --bg-color: #040342;
+    /* Dark Blue */
+    --text-color: #ECECEC;
+    /* Light Gray */
+
+    /* Additional Colors */
+    --secondary-bg: #1C1C60;
+    /* Slightly Lighter Blue */
+    --secondary-text: #B0B0B0;
+    /* Soft Gray */
+    --accent-color1: #34B1A7;
+    /* Teal */
+    --accent-color2: #FF6B6B;
+    /* Warm Coral */
+    --tertiary-bg: #31317A;
+    /* Even Lighter Blue */
+
+    /* Typography */
+    --navbar-font: 'Share Tech Mono', sans-serif;
+    --heading1-font: 'Merriweather Sans', sans-serif;
+    --heading3-font: 'Merriweather', serif;
+    --body-text-font: 'Merriweather', serif;
+    --button-font: 'Roboto Mono', monospace;
+
+    /* Navbar styles */
+    --navbar-bg: rgba(28, 28, 96, 0.5);
+
+    /* Transition & Animation */
+    --transition-speed: 0.3s;
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    /* Smooth animations */
+}
+
+
+.head{
+    margin-top: .4vw !important;
+    margin-left: 5vw !important;
+    color: var(--accent-color2);
+    font-family: var(--navbar-font);
+    font-size: 4vw !important;
+    font-weight: 800;
+    text-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
+    
+}
+
+.dropdownlan ,.dropdowntheme{
+    position: fixed;
+    top: 0;
+    left: 64vw;
+    height: 3.5vw;
+    width: 15vw;
+    align-content: center;
+    font-weight: 500;
+    font-size: 1.5vw;
+    font-family: var(--button-font);
+    background: var(--accent-color2);
+    color: var(--text-color);
+    border: var(--bg-color);
+    padding: 4px 7px;
+    box-shadow: 25px 25px 25px rgba(30, 29, 29, 0.2);
+
+    border-radius:  0 0 .3vw .3vw;
+   
+
+}
+
+.dropdowntheme{
+    left: 46vw;
+}
+
+.CodeMirror {
+    border-radius: 8px;  /* Adjust this value as per your design preference */
+    opacity: .8;
+}
+
+
+.code {
+   margin-left: 1vw;
+    align-items: center;
+    padding: 2%;
+    width: 60vw;
+    height: 44vw;
+
+    border-radius: .5vw;
+    background-color: var(--tertiary-bg);
+}
+
+.boxinfo{
+    margin-top: -1vw;
+  color: var(--text-color);
+  font-family: var(--heading3-font);
+  font-size: 1.3vw;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.runbutan {
+    background: var(--accent-color2);
+    font-family: var(--button-font) !important;
+    font-size: 1.5vw;
+    font-weight: 550;
+    border-color: var(--accent-color2);
+    width: 7vw;
+    height: 3vw;
+    margin-top: 1vw;
+    margin-right: 3vw;
+    margin-left: 3vw;
+  
+   
+    color: white;
+    /* Distance between buttons */
+    border-radius: 8px;
+    box-shadow: 25px 25px 25px rgba(30, 29, 29, 0.2),
+
+}
+
+
+#inputc{
+  position: relative;
+    width: 36vw;
+    height: 21.5vw;
+    margin: -43.2vw 0vw 0vw 59vw;
+
+}
+#outputc{
+    position: relative;
+    width: 36vw;
+    height: 21.5vw;
+    margin: 1vw 0vw 0vw 59vw;
+}
+
