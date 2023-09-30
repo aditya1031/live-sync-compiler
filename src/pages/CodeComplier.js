@@ -6,8 +6,9 @@ import CodeMirror from 'codemirror';
 import 'codemirror/mode/clike/clike';
 import 'codemirror/mode/javascript/javascript';
 import 'codemirror/mode/python/python';
-import 'codemirror/mode/htmlmixed/htmlmixed';
-import 'codemirror/mode/css/css';
+
+
+
 
 // Styles & Themes
 import 'codemirror/lib/codemirror.css';
@@ -102,12 +103,9 @@ const CodeCompiler = () => {
             <h1><a className='head' href="/">LiveCodeSync</a></h1>
             <select onChange={(e) => setLanguage(e.target.value)} className='dropdownlan'>
                 <option value="python">Python</option>
-                <option value="javascript">JavaScript</option>
-                <option value="text/x-csrc">C</option>
-                <option value="text/x-c++src">C++</option>
+                <option value="text/x-csrc">C/C++</option>
                 <option value="text/x-java">Java</option>
-                <option value="htmlmixed">HTML</option>
-                <option value="css">CSS</option>
+              
             </select>
 
             <select onChange={(e) => setTheme(e.target.value)} className='dropdowntheme'>

@@ -59,7 +59,7 @@
     color: var(--text-color);
     border: var(--bg-color);
     padding: 4px 7px;
-    box-shadow: 25px 25px 25px rgba(30, 29, 29, 0.2);
+    box-shadow: 15px 15px 15px rgba(17, 17, 17, 0.049);
 
     border-radius:  0 0 .3vw .3vw;
    

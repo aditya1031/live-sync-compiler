@@ -1,0 +1,190 @@
+:root {
+    /* Base Colors */
+    --bg-color: #040342;
+    /* Dark Blue */
+    --text-color: #ECECEC;
+    /* Light Gray */
+
+    /* Additional Colors */
+    --secondary-bg: #1C1C60;
+    /* Slightly Lighter Blue */
+    --secondary-text: #B0B0B0;
+    /* Soft Gray */
+    --accent-color1: #34B1A7;
+    /* Teal */
+    --accent-color2: #FF6B6B;
+    /* Warm Coral */
+    --tertiary-bg: #31317A;
+    /* Even Lighter Blue */
+
+    /* Typography */
+    --navbar-font: 'Share Tech Mono', sans-serif;
+    --heading1-font: 'Merriweather Sans', sans-serif;
+    --heading3-font: 'Merriweather', serif;
+    --body-text-font: 'Merriweather', serif;
+    --button-font: 'Roboto Mono', monospace;
+
+    /* Navbar styles */
+    --navbar-bg: rgba(28, 28, 96, 0.5);
+
+    /* Transition & Animation */
+    --transition-speed: 0.3s;
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    /* Smooth animations */
+}
+
+
+
+#web {
+    left: 65vw;
+}
+
+.code-wrapper button {
+    background-color: var(--accent-color2);
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 88px;
+    width: 3vw;
+    transition: background-color 0.3s;
+}
+
+.code-wrapper button:hover {
+    background-color: var(--accent-color1);
+}
+
+.code-wrapper.maximized {
+    width: 100%;
+
+}
+
+/* Minimized size */
+.code-wrapper.minimized {
+    width: 200px;
+
+}
+
+.boxinfo {
+    font-family: var(--button-font);
+    font-weight: 500;
+    display: inline-block;
+    /* make this inline to align with button */
+
+}
+
+.code-wrapper button {
+    margin-top: -.5vw;
+
+    /* make this inline to align with title */
+    float: right;
+}
+
+/* Add height to textarea inside codemirror */
+.CodeMirror {
+    height: 300px;
+    /* you can adjust this value */
+}
+
+.code-wrapper {
+    background-color: var(--tertiary-bg);
+    padding: 1%;
+    margin-left: 1.5vw;
+    border-radius: 8px;
+}
+
+.code-wrapper-container {
+    margin-left: .5vw;
+    margin-right: 5vw;
+
+    width: 97%;
+    display: flex;
+}
+
+.preview-container iframe {
+    background: var(--text-color);
+    margin-top: 1vw;
+    width: 100%;
+    height: 20vw;
+    border: none;
+    color: var(--text-color);
+}
+.preview-container iframe {
+    border: none;
+  
+}
+
+
+
+/*<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+</body>
+</html>
+*/
+
+/*
+document.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(heading => {
+    heading.addEventListener("click", function() {
+        // Toggle scale on click
+        if (this.style.transform) {
+            this.style.transform = "";
+        } else {
+            this.style.transform = "scale(1.1)";
+        }
+    });
+});
+
+*/
+
+
+/*
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #555;
+    font-size: 2.2em;
+}
+
+h3 {
+    color: #777;
+    font-size: 1.9em;
+}
+
+h4 {
+    color: #999;
+    font-size: 1.6em;
+}
+
+h5 {
+    color: #bbb;
+    font-size: 1.3em;
+}
+
+h6 {
+    color: #ddd;
+    font-size: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 20px 0;
+    cursor: pointer;  
+    transition: transform 0.3s ease;  
+}
+*/
